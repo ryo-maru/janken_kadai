@@ -11,21 +11,17 @@ class Player
     puts "0:グー, 1:チョキ, 2:パー"
     # 変数「input_hand」にプレイヤーの入力値を代入します。
     # ヒント：getsメソッドについて調べてみましょう。
-    input_hand = gets.to_i
+while true
+
+    hand = gets.chomp
 
     # 「input_hand」が「0, 1, 2」のいずれかだと繰り返し処理を終了し、それ以外（アルファベットも含む）だと繰り返し処理を継続します。
-    while true
 
-      if input_hand ==0
-        return  0
-      elsif input_hand ==1
-        return  1
-      elsif input_hand ==2
-        return  2
 
-      else
-        puts "０〜２の番号を入力してください"
-        input_hand = gets.to_i
+      unless hand =="0" ||hand=="1"||hand=="2"
+      puts "無効な数字"
+    else
+      return hand.to_i
 
 
 
